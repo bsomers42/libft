@@ -3,14 +3,15 @@
 /*                                                        ::::::::            */
 /*   ft_memcpy.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: bsomers <bsomers@student.codam.nl>           +#+                     */
+/*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/11 14:08:12 by bsomers       #+#    #+#                 */
-/*   Updated: 2020/12/05 11:01:25 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/01/25 13:10:22 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

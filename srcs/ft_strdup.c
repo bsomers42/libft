@@ -6,13 +6,14 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/29 21:33:10 by bsomers       #+#    #+#                 */
-/*   Updated: 2020/12/05 15:51:10 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/01/25 13:15:22 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {

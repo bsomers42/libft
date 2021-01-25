@@ -6,12 +6,13 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/27 18:47:30 by bsomers       #+#    #+#                 */
-/*   Updated: 2020/12/05 15:36:22 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/01/25 13:06:00 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include <stdlib.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

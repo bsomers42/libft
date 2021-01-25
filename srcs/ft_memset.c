@@ -3,15 +3,16 @@
 /*                                                        ::::::::            */
 /*   ft_memset.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: bsomers <bsomers@student.codam.nl>           +#+                     */
+/*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/04 16:02:18 by bsomers       #+#    #+#                 */
-/*   Updated: 2020/11/04 17:32:59 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/01/25 13:12:07 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {

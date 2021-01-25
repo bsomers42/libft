@@ -3,14 +3,15 @@
 /*                                                        ::::::::            */
 /*   ft_memcmp.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: bsomers <bsomers@student.codam.nl>           +#+                     */
+/*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/25 12:33:27 by bsomers       #+#    #+#                 */
-/*   Updated: 2020/11/25 13:54:08 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/01/25 13:09:18 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

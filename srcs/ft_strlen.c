@@ -6,11 +6,12 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/30 15:22:18 by bsomers       #+#    #+#                 */
-/*   Updated: 2020/11/29 22:24:28 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/01/25 13:17:49 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

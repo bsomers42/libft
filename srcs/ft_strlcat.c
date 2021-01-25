@@ -6,13 +6,14 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/24 17:17:44 by bsomers       #+#    #+#                 */
-/*   Updated: 2020/12/05 13:39:51 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/01/25 13:16:39 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include <stdio.h>
 #include <string.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

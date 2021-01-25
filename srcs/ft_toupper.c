@@ -6,9 +6,11 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/02 15:25:03 by bsomers       #+#    #+#                 */
-/*   Updated: 2020/11/02 20:23:47 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/01/25 13:22:56 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

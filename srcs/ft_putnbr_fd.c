@@ -6,11 +6,12 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/16 18:55:13 by bsomers       #+#    #+#                 */
-/*   Updated: 2021/01/18 12:51:11 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/01/25 13:13:42 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

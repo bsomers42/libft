@@ -6,9 +6,11 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/02 14:25:01 by bsomers       #+#    #+#                 */
-/*   Updated: 2020/12/05 15:45:17 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/01/25 13:04:23 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {

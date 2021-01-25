@@ -3,14 +3,15 @@
 /*                                                        ::::::::            */
 /*   ft_strchr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: bsomers <bsomers@student.codam.nl>           +#+                     */
+/*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/25 14:02:45 by bsomers       #+#    #+#                 */
-/*   Updated: 2020/12/05 12:01:09 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/01/25 13:14:41 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

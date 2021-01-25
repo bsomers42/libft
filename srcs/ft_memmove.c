@@ -3,14 +3,15 @@
 /*                                                        ::::::::            */
 /*   ft_memmove.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: bsomers <bsomers@student.codam.nl>           +#+                     */
+/*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/11 19:53:48 by bsomers       #+#    #+#                 */
-/*   Updated: 2020/12/05 17:15:36 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/01/25 13:11:19 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include "libft.h"
 
 static	int		ft_overlap(const void *dst, const void *src, size_t len)
 {
