@@ -6,7 +6,7 @@
 #    By: bsomers <bsomers@student.42.fr>              +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/13 16:21:29 by bsomers       #+#    #+#                  #
-#    Updated: 2021/01/18 12:50:53 by bsomers       ########   odam.nl          #
+#    Updated: 2021/01/29 11:20:40 by bsomers       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,9 +41,10 @@ SRC = 	srcs/ft_isprint.c \
 		srcs/ft_putchar_fd.c \
 		srcs/ft_putstr_fd.c \
 		srcs/ft_putendl_fd.c \
-		srcs/ft_putnbr_fd.c
+		srcs/ft_putnbr_fd.c \
+		srcs/ft_strmapi.c
 
-INCLUDES = includes/libft.h
+INCLUDES = libft.h
 
 all: $(NAME)
 
@@ -79,7 +80,8 @@ $(NAME):
 		ft_putchar_fd.o \
 		ft_putstr_fd.o \
 		ft_putendl_fd.o \
-		ft_putnbr_fd.o
+		ft_putnbr_fd.o \
+		ft_strmapi.o
 
 so:
 	$(CC) -fPIC $(CFLAGS) $(SRC)
