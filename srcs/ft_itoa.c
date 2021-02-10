@@ -6,7 +6,7 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/29 11:52:06 by bsomers       #+#    #+#                 */
-/*   Updated: 2021/01/29 11:57:15 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/02/10 12:49:12 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ char    ft_itoa(int n)
 	
 
 }
-
+/*
 int	main()
 {
 	printf("%s", ft_itoa(12));
-}
+}*/

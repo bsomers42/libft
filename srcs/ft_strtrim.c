@@ -6,7 +6,7 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/02 19:46:35 by bsomers       #+#    #+#                 */
-/*   Updated: 2021/01/25 13:20:42 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/02/10 12:49:41 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,8 +77,8 @@ char    *ft_strtrim(char const *s1, char const *set)
 	}
 	return (sdef);
 }
-
+/*
 int	main()
 {
 	printf("The outcome is: %s\n", ft_strtrim("uwvxyz", "amungvrgn"));
-}
+}*/
