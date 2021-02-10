@@ -6,7 +6,7 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/24 17:17:44 by bsomers       #+#    #+#                 */
-/*   Updated: 2021/01/25 13:16:39 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/01/29 11:21:43 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	return (k+i);
 }
-
+/*
 int	main()
 {
 	char dst[] = "the cake is a lie !\0I'm hidden lol\r\n";
 	char src[] = "there is no stars in the sky";
 	printf("System outcome: %lu, \n", strlcat(dst, src, 10));
 	printf("My outcome: %zu, \n", ft_strlcat(dst, src, 10));
-}
+} */
