@@ -6,41 +6,35 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/29 21:58:16 by bsomers       #+#    #+#                 */
-/*   Updated: 2021/02/15 18:48:21 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/03/03 18:58:44 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> //weg
-#include <stddef.h>//weg
-#include <stdlib.h>//weg
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*sub;
-	unsigned int	i;
 	size_t			count;
+	size_t			strl;
 
-	i = 0;
 	count = 0;
-	while (i != start)
+	strl = ft_strlen(s);
+	if (s[0] == '\0')
+		return (NULL);
+	if (start >= strl)
+		return (ft_strdup("")); //strdup omdat je voor de empty string ook moet mallocen
+	if ((start + len) > strl) //voor als het einde van len na strlen(s) valt
+		len = strl - start;
+	sub = malloc((len + 1) * (sizeof(unsigned char)));
+	if (sub == NULL)
+		return (NULL);
+	while (count < len && s[start] != '\0')
 	{
-		i++;
-		if (s[i] == '\0')
-			return (NULL);
-	}
-	while (s[i] != '\0')
-		i++;
-	sub = malloc(count * (sizeof(unsigned char)));  //count = 0!!
-	while (i != start)
-		i--;
-	while (count < len && s[i] != '\0')
-	{
-		sub[count] = s[i];
-		i++;
+		sub[count] = s[start];
+		start++;
 		count++;
 	}
+	sub[count] = '\0';
 	return (sub);
 }
-
-//CHECKEN! (niet af)

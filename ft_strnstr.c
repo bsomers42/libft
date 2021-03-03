@@ -6,7 +6,7 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/25 14:40:50 by bsomers       #+#    #+#                 */
-/*   Updated: 2021/02/15 18:47:12 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/03/03 11:53:23 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,13 @@ char	*ft_strnstr(const char *hay, const char *needle, size_t len)
 		if (hay[i] == needle[0])
 		{
 			j = 0;
-			while (hay[i + j] == needle[j] && hay[i] != '\0' && ((i + j) < len))
+			while (hay[i + j] == needle[j] && ((i + j) < len))
 			{
 				j++;
+				if (needle[j] == '\0')
+					return (&((char*)hay)[i]);
 			}
-			if (j == ft_strlen(needle))//liever niet strlen in while loop, maar matchen met extra variable!
+			if (j ==  ft_strlen(needle))
 				return (&((char*)hay)[i]);
 		}
 		i++;

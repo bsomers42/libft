@@ -6,7 +6,7 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/02 12:47:37 by bsomers       #+#    #+#                 */
-/*   Updated: 2021/01/25 13:15:59 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/03/03 17:47:40 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i++;
 	while (s2[j] != '\0')
 		j++;
-	sdef = malloc((i + j) * (sizeof(unsigned char)));
+	sdef = malloc((i + j + 2) * (sizeof(unsigned char)));
 	if (sdef == NULL)
 		return (NULL);
 	i = -1;
@@ -35,5 +35,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	--i;
 	while (s2[++j] != '\0')
 		sdef[++i] = s2[j];
+	sdef[i+1] = '\0'; //deze toegevoegd
 	return (sdef);
 }

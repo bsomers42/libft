@@ -6,9 +6,12 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/02 14:25:01 by bsomers       #+#    #+#                 */
-/*   Updated: 2021/02/15 18:32:17 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/03/03 12:35:27 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h> //!!! 
+#include <stdio.h> //!!!
 
 #include "libft.h"
 
@@ -26,6 +29,8 @@ int	ft_atoi(const char *nptr)
 		i++;
 	if (nptr[i] == '-')
 	{
+		if (nptr[i + 1] == '+' || nptr[i + 1] == '-')
+			return (0);
 		min = -1;
 		i++;
 	}
@@ -39,5 +44,12 @@ int	ft_atoi(const char *nptr)
 	return (num * min);
 }
 
-// checken met -+24
+
 // max values (denk aan waarde long)
+
+int main()
+{
+	char str[] = "9223372036854775810";
+
+	printf("System function: %d\nMy function: %d\n\n\n\n", atoi(str), ft_atoi(str));
+}
