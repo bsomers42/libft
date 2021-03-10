@@ -6,7 +6,7 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/24 17:17:44 by bsomers       #+#    #+#                 */
-/*   Updated: 2021/02/15 18:45:25 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/03/10 13:29:07 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,19 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
+	size_t	len_dest;
 	size_t	i;
-	size_t	j;
-	size_t	k;
 
+	len_dest = 0;
 	i = 0;
-	j = 0;
-	k = 0;
-	while (dst[k] != '\0' /*&& i <= size*/)
+	while(len_dest < size && dst[len_dest] != '\0') //Looks for length of dst without null (that fits within size)
+		len_dest++;
+	while (len_dest + i + 1 < size && src[i] != '\0')
 	{
-		k++;
+		dst[len_dest + i] = src[i];
+		i++;
 	}
-	if (dst[k] == '\0')
-	{
-		while (src[j] != '\0' && i <= size)
-		{
-			dst[k + i] = src[j];
-			i++;
-			j++;
-		}
-		dst[i] = '\0';
-	}
-	return (k + i);
+	if (len_dest + i < size)
+		dst[len_dest + i] = '\0';
+	return (len_dest + ft_strlen(src));
 }
-/*
-int	main()
-{
-	char dst[] = "the cake is a lie !\0I'm hidden lol\r\n";
-	char src[] = "there is no stars in the sky";
-	printf("System outcome: %lu, \n", strlcat(dst, src, 10));
-	printf("My outcome: %zu, \n", ft_strlcat(dst, src, 10));
-} */

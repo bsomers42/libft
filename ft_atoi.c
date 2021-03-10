@@ -6,7 +6,7 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/02 14:25:01 by bsomers       #+#    #+#                 */
-/*   Updated: 2021/03/03 12:35:27 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/03/10 16:41:45 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,9 @@ int	ft_atoi(const char *nptr)
 
 // max values (denk aan waarde long)
 
-int main()
-{
-	char str[] = "9223372036854775810";
+// int main()
+// {
+// 	char str[] = "9223372036854775810";
 
-	printf("System function: %d\nMy function: %d\n\n\n\n", atoi(str), ft_atoi(str));
-}
+// 	printf("System function: %d\nMy function: %d\n\n\n\n", atoi(str), ft_atoi(str));
+// }
