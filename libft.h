@@ -6,7 +6,7 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/13 16:41:49 by bsomers       #+#    #+#                 */
-/*   Updated: 2021/03/10 11:13:21 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/03/17 19:40:02 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char    *ft_strtrim(char const *s1, char const *set);
 
 #endif

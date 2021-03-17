@@ -6,7 +6,7 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/02 19:46:35 by bsomers       #+#    #+#                 */
-/*   Updated: 2021/03/17 15:15:03 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/03/17 19:39:54 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 
 // line 63: to prevent from unnecessary mallocing
 
-static int
-	check_set(char c, char const *set)
+static int	check_set(char c, char const *set)
 {
 	size_t	i;
 
