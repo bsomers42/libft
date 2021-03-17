@@ -6,7 +6,7 @@
 #    By: bsomers <bsomers@student.42.fr>              +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/13 16:21:29 by bsomers       #+#    #+#                  #
-#    Updated: 2021/02/15 21:26:10 by bsomers       ########   odam.nl          #
+#    Updated: 2021/03/17 12:44:52 by bsomers       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,8 @@ SRC = 	ft_isprint.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
-		ft_strmapi.c
+		ft_strmapi.c \
+		ft_strtrim.c
 
 O_FILES = $(SRC:%.c=%.o)
 
@@ -83,7 +84,8 @@ $(NAME):
 		ft_putstr_fd.o \
 		ft_putendl_fd.o \
 		ft_putnbr_fd.o \
-		ft_strmapi.o
+		ft_strmapi.o \
+		ft_strtrim.o
 
 so: libft.so
 %.so: $(O_FILES)

@@ -6,7 +6,7 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/16 14:53:35 by bsomers       #+#    #+#                 */
-/*   Updated: 2021/03/10 17:22:43 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/03/17 15:21:01 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,11 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	return (i);
 }
 
-// int	main()
-// {
-// 	char s1[] = "Aaaaa";
-// 	char s2[] = "Bbbbbbb";
-// 	// char s3[] = "Aaaaa";
-// 	// char s4[] = "Bbbbbbb";
-// 	printf("My result is: %ld -- %s\n", ft_strlcpy(s1, s2, 7), s1/*, strlcpy(s3, s4, 7), s3*/);
-// }
+int	main()
+{
+	char s1[] = "Aaaa";
+	char s2[] = "Bbbb";
+	char s3[] = "Aaaa";
+	char s4[] = "Bbbb";
+	printf("My result is: %ld -- %s\nSystem result: %ld -- %s", ft_strlcpy(s1, s2, 2), s1, strlcpy(s3, s4, 2), s3);
+}

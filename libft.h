@@ -6,7 +6,7 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/13 16:41:49 by bsomers       #+#    #+#                 */
-/*   Updated: 2021/02/15 18:53:55 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/03/10 11:13:21 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 
 # include <stddef.h>
 # include <unistd.h>
+# include <stdlib.h>
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);

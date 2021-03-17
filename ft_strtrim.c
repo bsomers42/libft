@@ -6,79 +6,64 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/02 19:46:35 by bsomers       #+#    #+#                 */
-/*   Updated: 2021/02/10 12:49:41 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/03/17 15:15:03 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+// line 63: to prevent from unnecessary mallocing
+
+static int
+	check_set(char c, char const *set)
 {
-	char			*sub;
-	unsigned int	i;
-	size_t			count;
+	size_t	i;
 
 	i = 0;
-	count = 0;
-	while (i != start)
+	while (set[i])
 	{
-		i++;
-		if (s[i] == '\0')
-			return (0);
-	}
-	while (s[i] != '\0')
-		i++;
-	sub = malloc(count * (sizeof(unsigned char)));
-	while (i != start)
-		i--;
-	while (count < len && s[i] != '\0')
-	{
-		sub[count] = s[i];
-		i++;
-		count++;
-	}
-	return (sub);
-}
-
-static	int	check_set(char c, char const *set)
-{
-	int	i;
-
-	i= 0;
-	while (set[i] != '\0')
-	{
-		i++;
 		if (set[i] == c)
 			return (1);
+		i++;
 	}
 	return (0);
 }
 
-char    *ft_strtrim(char const *s1, char const *set)
+char	*copy_set(char *sdef, char const *s1, int start, int end)
 {
-	char	*sdef;
-	int		i;
-	//int		j;
+	int	i;
 
 	i = 0;
-	while (s1[i] != '\0')
-		i++;
-	sdef = malloc(i * (sizeof(unsigned char)));
-	if (sdef == NULL)
-		return (NULL);
-	i = 0;
-	while (s1[i] != '\0')
+	while (start < end)
 	{
-		if ((check_set(s1[i], (char const *)set)) == 1)
-			sdef/*[j++]*/ = ft_substr(s1, i, 1);
+		sdef[i] = s1[start];
 		i++;
+		start++;
 	}
+	sdef[i] = '\0';
 	return (sdef);
 }
-/*
-int	main()
+
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	printf("The outcome is: %s\n", ft_strtrim("uwvxyz", "amungvrgn"));
-}*/
+	char	*sdef;
+	size_t	start;
+	size_t	end;
+
+	if (set == NULL || s1 == NULL)
+		return ((char *) s1);
+	start = 0;
+	while (s1[start] && check_set(s1[start], set))
+		start++;
+	end = ft_strlen(s1);
+	while (end > start && check_set(s1[end - 1], set))
+		end--;
+	if (start >= end)
+		return (ft_strdup(""));
+	sdef = malloc((sizeof(char)) * (end - start + 1));
+	if (sdef == NULL)
+		return (NULL);
+	copy_set(sdef, s1, start, end);
+	return (sdef);
+}
