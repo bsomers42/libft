@@ -6,9 +6,12 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/29 21:58:16 by bsomers       #+#    #+#                 */
-/*   Updated: 2021/03/03 18:58:44 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/03/31 14:16:18 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+// On line 26, use strdup because you also need to malloc for empty string
+// On line 29, you check if the end of len is after strlen(s)
 
 #include "libft.h"
 
@@ -23,8 +26,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (s[0] == '\0')
 		return (NULL);
 	if (start >= strl)
-		return (ft_strdup("")); //strdup omdat je voor de empty string ook moet mallocen
-	if ((start + len) > strl) //voor als het einde van len na strlen(s) valt
+		return (ft_strdup(""));
+	if ((start + len) > strl)
 		len = strl - start;
 	sub = malloc((len + 1) * (sizeof(unsigned char)));
 	if (sub == NULL)

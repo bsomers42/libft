@@ -6,11 +6,10 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/02 19:46:35 by bsomers       #+#    #+#                 */
-/*   Updated: 2021/03/17 19:39:54 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/03/31 14:03:16 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 // line 63: to prevent from unnecessary mallocing

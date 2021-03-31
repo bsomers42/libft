@@ -6,11 +6,10 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/25 14:40:50 by bsomers       #+#    #+#                 */
-/*   Updated: 2021/03/03 11:53:23 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/03/31 14:14:15 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 char	*ft_strnstr(const char *hay, const char *needle, size_t len)
@@ -20,7 +19,7 @@ char	*ft_strnstr(const char *hay, const char *needle, size_t len)
 
 	i = 0;
 	if (needle[0] == '\0')
-		return ((char*)hay);
+		return ((char *)hay);
 	while (i <= len || hay[i] == '\0')
 	{
 		if (hay[i] == needle[0])
@@ -30,10 +29,10 @@ char	*ft_strnstr(const char *hay, const char *needle, size_t len)
 			{
 				j++;
 				if (needle[j] == '\0')
-					return (&((char*)hay)[i]);
+					return (&((char *)hay)[i]);
 			}
-			if (j ==  ft_strlen(needle))
-				return (&((char*)hay)[i]);
+			if (j == ft_strlen(needle))
+				return (&((char *)hay)[i]);
 		}
 		i++;
 	}

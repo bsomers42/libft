@@ -6,11 +6,10 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/25 11:31:06 by bsomers       #+#    #+#                 */
-/*   Updated: 2021/01/25 13:08:50 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/03/31 13:58:14 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)

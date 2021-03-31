@@ -6,7 +6,7 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/11 19:53:48 by bsomers       #+#    #+#                 */
-/*   Updated: 2021/02/15 21:39:26 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/03/31 14:09:35 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,6 @@
 
 static	int	ft_overlap(const void *dst, const void *src, size_t len)
 {
-	/*unsigned char	dst2;
-	unsigned char	src2;
-
-	dst2 = (unsigned char)dst;
-	src2 = (unsigned char)src;*/
 	if (src < dst && dst < src + len)
 		return (1);
 	else
@@ -38,16 +33,18 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		while (i < len)
 		{
 			x = len - i - 1;
-			((unsigned char *)dst)[x] = ((unsigned char*)src)[x];
+			((unsigned char *)dst)[x] = ((unsigned char *)src)[x];
 			i++;
 		}
 		return (dst);
 	}
 	else
+	{
 		while (i < len)
 		{
 			i++;
-			((unsigned char*)dst)[i - 1] = ((const unsigned char*)src)[i - 1];
-		}/*insert memcpy*/
+			((unsigned char *)dst)[i - 1] = ((const unsigned char *)src)[i - 1];
+		}
+	}
 	return (dst);
 }

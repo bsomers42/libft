@@ -6,27 +6,32 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/02 14:25:01 by bsomers       #+#    #+#                 */
-/*   Updated: 2021/03/24 13:36:13 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/03/31 16:23:09 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h> //!!! 
-#include <stdio.h> //!!!
-
 #include "libft.h"
+
+int	check_empty(const char *nptr)
+{
+	int	i;
+
+	i = 0;
+	while (nptr[i] == '\n' || nptr[i] == ' ' || nptr[i] == '\t'
+		|| nptr[i] == '\v' || nptr[i] == '\f' || nptr[i] == '\r')
+		i++;
+	return (i);
+}
 
 int	ft_atoi(const char *nptr)
 {
-	int	i;
-	int	min;
-	int	num;
+	int		i;
+	int		min;
+	size_t	num;
 
-	i = 0;
+	i = check_empty(nptr);
 	min = 1;
 	num = 0;
-	while (nptr[i] == '\n' || nptr[i] == ' ' || nptr[i] == '\t' ||
-			nptr[i] == '\v' || nptr[i] == '\f' || nptr[i] == '\r')
-		i++;
 	if (nptr[i] == '-')
 	{
 		if (nptr[i + 1] == '+' || nptr[i + 1] == '-')
@@ -41,15 +46,5 @@ int	ft_atoi(const char *nptr)
 		num = num * 10 + (nptr[i] - '0');
 		i++;
 	}
-	return (num * min);
+	return ((int)(num * min));
 }
-
-
-// max values (denk aan waarde long)
-
-// int main()
-// {
-// 	char str[] = "9223372036854775810";
-
-// 	printf("System function: %d\nMy function: %d\n\n\n\n", atoi(str), ft_atoi(str));
-// }

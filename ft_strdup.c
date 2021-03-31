@@ -6,13 +6,10 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/29 21:33:10 by bsomers       #+#    #+#                 */
-/*   Updated: 2021/02/15 18:43:41 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/03/31 14:01:24 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h> //weg
-#include <stdio.h>//weg
-#include <stdlib.h>//weg (want Norminette geeft warning)
 #include "libft.h"
 
 char	*ft_strdup(const char *s)
@@ -24,11 +21,11 @@ char	*ft_strdup(const char *s)
 	len = 0;
 	i = 0;
 	while (s[len] != '\0')
-		len++; //ft_strlen
+		len++;
 	dup = malloc((sizeof(char))*(len + 1));
 	if (dup == NULL)
 		return (NULL);
-	while (i < len) //memcpy
+	while (i < len)
 	{
 		dup[i] = s[i];
 		i++;

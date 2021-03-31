@@ -6,60 +6,13 @@
 #    By: bsomers <bsomers@student.42.fr>              +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/13 16:21:29 by bsomers       #+#    #+#                  #
-#    Updated: 2021/03/24 16:40:40 by bsomers       ########   odam.nl          #
+#    Updated: 2021/03/31 17:39:11 by bsomers       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRC = 	ft_isprint.c \
-		ft_isdigit.c \
-		ft_isalpha.c \
-		ft_atoi.c \
-		ft_bzero.c \
-		ft_isalnum.c \
-		ft_isascii.c \
-		ft_memccpy.c \
-		ft_memcpy.c \
-		ft_memmove.c \
-		ft_memset.c \
-		ft_strlcpy.c \
-		ft_strlen.c \
-		ft_toupper.c \
-		ft_tolower.c \
-		ft_strlcat.c \
-		ft_memchr.c \
-		ft_memcmp.c \
-		ft_strchr.c \
-		ft_strrchr.c \
-		ft_strnstr.c \
-		ft_strncmp.c \
-		ft_calloc.c \
-		ft_strdup.c \
-		ft_substr.c \
-		ft_strjoin.c \
-		ft_putchar_fd.c \
-		ft_putstr_fd.c \
-		ft_putendl_fd.c \
-		ft_putnbr_fd.c \
-		ft_strmapi.c \
-		ft_strtrim.c \
-		ft_itoa.c \
-		ft_lstnew.c \
-		ft_lstadd_front.c \
-		ft_lstsize.c \
-		ft_lstlast.c
-
-O_FILES = $(SRC:%.c=%.o)
-
-INCLUDES = incl
-
-all: $(NAME)
-
-$(NAME): 
-	gcc -Wall -Wextra -Werror -c $(SRC) -I $(INCLUDES)
-	ar rc $(NAME) \
-		ft_isprint.o \
+O_FILES = ft_isprint.o \
 		ft_isdigit.o \
 		ft_isalpha.o \
 		ft_atoi.o \
@@ -91,20 +44,48 @@ $(NAME):
 		ft_putnbr_fd.o \
 		ft_strmapi.o \
 		ft_strtrim.o \
-		ft_itoa.o \
-		ft_lstnew.o \
+		ft_itoa.o
+
+SRC = $(O_FILES:.o=.c)
+
+O_BONUS = ft_lstnew.o \
 		ft_lstadd_front.o \
 		ft_lstsize.o \
-		ft_lstlast.o
+		ft_lstlast.o \
+		ft_lstadd_back.o \
+		ft_lstdelone.o
 
-so: libft.so
-%.so: $(O_FILES)
-	$(CC) -shared -o $@ $^ -L.
+BONUS = $(O_BONUS:.o=.c)
+
+HEADER = libft.h
+
+CFLAGS = -Wall -Wextra -Werror
+
+ifdef WITH_BONUS
+	OBJ = $(O_FILES) $(O_BONUS)
+else
+	OBJ = $(O_FILES)
+endif
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	ar rcs $@ $^
+
+%.o: %.c $(HEADER)
+	$(CC) -c $(CFLAGS) -o $@ $<
+
+bonus:
+	$(MAKE) WITH_BONUS=1 all
 
 clean:
-	/bin/rm -f *.o
+	rm -f $(O_FILES) $(O_BONUS)
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	rm -f $(NAME)
 
-re: fclean all
+re:
+	$(MAKE) fclean
+	$(MAKE) all
+
+.PHONY: all clean fclean re
