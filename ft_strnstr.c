@@ -6,9 +6,19 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/25 14:40:50 by bsomers       #+#    #+#                 */
-/*   Updated: 2021/03/31 14:14:15 by bsomers       ########   odam.nl         */
+/*   Updated: 2021/04/07 14:56:34 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+// ft_strnstr locates the first occurrence of the null-
+// terminated string needle in the string haystack, where not more 
+// than len characters are searched.  Characters that appear 
+// after a `\0' character are not searched.
+
+// If needle is an empty string, haystack is returned.
+// If needle occurs nowhere in haystack, NULL is returned. 
+// Otherwise a pointer to the first character of the first 
+// occurrence of needle is returned.
 
 #include "libft.h"
 
