@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_split.c                                         :+:    :+:            */
+/*   ft_splitt.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: bsomers <bsomers@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/03/17 17:08:52 by bsomers       #+#    #+#                 */
-/*   Updated: 2021/04/07 16:17:32 by bsomers       ########   odam.nl         */
+/*   Created: 2021/04/14 12:43:46 by bsomers       #+#    #+#                 */
+/*   Updated: 2021/04/14 14:56:33 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,66 +14,76 @@
 #include <stdio.h>
 #include <string.h>
 
-// static int	check_s(char s, char c)
-// {
-// 	if (s == c)
-// 			return (1);
-// 	return (0);
-// }
-
-//  https://stackoverflow.com/questions/7631054/how-to-return-an-array-of-strings-in-c
-
 char **ft_split(char const *s, char c)
 {
-    int    i;
-    int    split;
-    int splitv;
-    int ls;
+    int		i;
+    int		split;
+	int		a;
+	int		arrn;
+	int		ls;
     char    **array;
 
-    ls = /*ft_*/strlen(s);
     i = 0;
-    split = 0;
-    while (s[split] != '\0' && s[split] != c)
-        {split++;}
-    if (split == 0)  //wat als c al op 0e locatie zit?
+	split = 0;
+	a = 0;
+	arrn = 0;
+	ls = /*ft_ */strlen(s);
+
+	if (s == NULL)
+		return (NULL)
+	array = malloc(sizeof(char *) * ls);
+    while (s[i] != '\0')
+    {
+        if (s[i] == c)
+		{
+			if (a == 0)
+				array[a] = malloc(i - split);
+			else if (a > 0)
+				array[a] = malloc(i - split - 1);
+        	if (!array[a])
+        	{
+           		while(a > -1)
+				{
+					free(array);
+					a--;
+				}
+         	  	return NULL;
+       		 }
+			split = i;
+			a++;
+		}
+		i++;
+    }
+	array[a] = malloc(i - split + 1);
+	if (!array[a])
+        	{
+           		while(a > -1)
+				{
+					free(array);
+					a--;
+				}
+         	  	return NULL;
+       		 }
+
+    if (i == ls && split == 0)  //wat als c al op 0e locatie zit?
         return((char **)s);
-    splitv = split;
-    array = malloc(sizeof(char *) * ls);
-    if (!array)
-        return NULL;
     i = 0;
-    
-        array[0] = malloc(split + 1);
-        if (!array[i])
-        {
-            free(array);
-            return NULL;
-        }
-        array[1] = malloc(ls - split + 1);
-        if (!array[i])
-        {
-            free(array);
-            return NULL;
-        }
-    
-    // s1 = malloc(sizeof(char) * (split + 1));
-    // l_s2 = /* ft_*/strlen(s) - split;
-    // s2 = malloc(sizeof(char) * (l_s2 + 1));
-    i = 0;
-    while (i <= split)
+	a = 0;
+	while (s[i] != '\0')
     {
-        array[0][i] = s[i];
-        i++;
-    }
-    i = 0;
-    while (i < (ls - splitv))
-    {
-        array[1][i] = s[split];
-        i++;
-        split++;
-    }
-    array [1][i] = '\0';
+
+		if (s[i] == c)
+		{
+			a++;
+			arrn = 0;
+			i++;
+		}
+        array[a][arrn] = s[i];
+		i++;
+		arrn++;
+		
+	}
+    array[a][arrn] = '\0';
     return(array);
 }
 
@@ -83,8 +93,8 @@ int        main(void)
     char c = 'b';
     char **s;
         
-    s = ft_split("halleuchens bhaha", c);
-    while (i < 2)
+    s = ft_split("hahabhuhub", c);
+    while (i < 20)
     {
         printf("string %d : %s\n", i, s[i]);
         i++;
