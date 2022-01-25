@@ -6,7 +6,7 @@
 #    By: bsomers <bsomers@student.42.fr>              +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/13 16:21:29 by bsomers       #+#    #+#                  #
-#    Updated: 2021/09/27 15:20:06 by bsomers       ########   odam.nl          #
+#    Updated: 2022/01/25 18:59:23 by bsomers       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,8 @@ O_FILES = ft_isprint.o \
 		ft_strtrim.o \
 		ft_itoa.o \
 		ft_split.o \
-		ft_striteri.o
+		ft_striteri.o \
+		ft_strrev.o
 
 SRC = $(O_FILES:.o=.c)
 
