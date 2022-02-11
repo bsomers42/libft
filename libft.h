@@ -6,7 +6,7 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/13 16:41:49 by bsomers       #+#    #+#                 */
-/*   Updated: 2022/01/25 18:58:58 by bsomers       ########   odam.nl         */
+/*   Updated: 2022/02/11 12:00:24 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,20 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdarg.h>
 
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
+typedef struct s_info
+{
+	int	ret;
+	int	flag;
+	int	i;
+}				t_info;
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
@@ -63,6 +71,14 @@ int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
-char	*ft_strrev(char *rev);
+int		ft_printf(const char *fmt, ...);
+int		ft_conv_x(va_list args, t_info *ret, char fmt_i);
+int		ft_dectohex_low(unsigned int dec, t_info *ret);
+int		ft_dectohex_up(unsigned int dec, t_info *ret);
+int		ft_conv_u(va_list args, t_info *ret);
+int		ft_conv_p(va_list args, t_info *ret);
+int		ft_conv_c(va_list args, t_info *ret);
+int		ft_conv_s(va_list args, t_info *ret);
+int		ft_conv_di(va_list args, t_info *ret);
 
 #endif
