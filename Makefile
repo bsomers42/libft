@@ -6,7 +6,7 @@
 #    By: bsomers <bsomers@student.42.fr>              +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/13 16:21:29 by bsomers       #+#    #+#                  #
-#    Updated: 2022/02/11 12:05:23 by bsomers       ########   odam.nl          #
+#    Updated: 2022/02/11 16:10:04 by bsomers       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ O_FILES = ft_isprint.o \
 		ft_calloc.o \
 		ft_strdup.o \
 		ft_substr.o \
+		ft_substr_gnl.o \
 		ft_strjoin.o \
 		ft_putchar_fd.o \
 		ft_putstr_fd.o \
@@ -46,14 +47,15 @@ O_FILES = ft_isprint.o \
 		ft_itoa.o \
 		ft_split.o \
 		ft_striteri.o \
-		ft_strrev.o \
 		ft_printf.o \
 		conv_c.o \
 		conv_di.o \
 		conv_p.o \
 		conv_s.o \
 		conv_u.o \
-		conv_Xx.o
+		conv_Xx.o \
+		get_next_line.o \
+		joinstr_gnl.o
 
 SRC = $(O_FILES:.o=.c)
 
