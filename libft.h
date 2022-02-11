@@ -6,7 +6,7 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/13 16:41:49 by bsomers       #+#    #+#                 */
-/*   Updated: 2022/02/11 12:00:24 by bsomers       ########   odam.nl         */
+/*   Updated: 2022/02/11 16:17:18 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
+# include <limits.h>
+# include <unistd.h>
+# include <fcntl.h>
 
 typedef struct s_list
 {
@@ -30,6 +33,15 @@ typedef struct s_info
 	int	flag;
 	int	i;
 }				t_info;
+
+typedef struct s_gnl
+{
+	int		ret;
+	int		n;
+	char	*nextline;
+	int		a;
+	int		flag;
+}		t_gnl;
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
@@ -80,5 +92,8 @@ int		ft_conv_p(va_list args, t_info *ret);
 int		ft_conv_c(va_list args, t_info *ret);
 int		ft_conv_s(va_list args, t_info *ret);
 int		ft_conv_di(va_list args, t_info *ret);
+char	*get_next_line(int fd);
+char	*joinstr_gnl(char *s1, char c, char *sdef);
+char	*ft_substr_gnl(char const *s, unsigned int st, size_t len, t_gnl *stat);
 
 #endif
