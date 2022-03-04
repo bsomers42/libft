@@ -6,7 +6,7 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/13 16:41:49 by bsomers       #+#    #+#                 */
-/*   Updated: 2022/02/11 16:17:18 by bsomers       ########   odam.nl         */
+/*   Updated: 2022/03/04 11:35:08 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,6 @@ int		ft_conv_di(va_list args, t_info *ret);
 char	*get_next_line(int fd);
 char	*joinstr_gnl(char *s1, char c, char *sdef);
 char	*ft_substr_gnl(char const *s, unsigned int st, size_t len, t_gnl *stat);
+void	free_array(char **str);
 
 #endif
