@@ -6,7 +6,7 @@
 #    By: bsomers <bsomers@student.42.fr>              +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/13 16:21:29 by bsomers       #+#    #+#                  #
-#    Updated: 2022/02/11 16:10:04 by bsomers       ########   odam.nl          #
+#    Updated: 2022/03/04 11:36:13 by bsomers       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,8 @@ O_FILES = ft_isprint.o \
 		conv_u.o \
 		conv_Xx.o \
 		get_next_line.o \
-		joinstr_gnl.o
+		joinstr_gnl.o \
+		ft_free_array.o
 
 SRC = $(O_FILES:.o=.c)
 
