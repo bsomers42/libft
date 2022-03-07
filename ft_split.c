@@ -23,8 +23,12 @@ static int	wcount(char const *s, char c)
 	i = ft_strlen(s);
 	while (d < i)
 	{
-		if (s[d] != c && (s[d - 1] == c || (d - 1) == -1))
-			w++;
+		if (d > 0)
+			if (s[d] != c && (s[d - 1] == c || (d - 1) == -1))
+				w++;
+		if (d < 1)
+			if (s[d] != c)
+				w++;
 		d++;
 	}
 	return (w + 1);
