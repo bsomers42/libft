@@ -46,7 +46,5 @@ int	ft_atoi(const char *nptr)
 		num = num * 10 + (nptr[i] - '0');
 		i++;
 	}
-	if ((num > 2147483647 && min == 1) || (num > 2147483648 && min == -1))
-		return ((int) NULL);
 	return ((int)(num * min));
 }
