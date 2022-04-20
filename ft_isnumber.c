@@ -6,7 +6,7 @@
 /*   By: bsomers <bsomers@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/09 13:40:13 by bsomers       #+#    #+#                 */
-/*   Updated: 2022/04/20 15:03:49 by bsomers       ########   odam.nl         */
+/*   Updated: 2022/04/20 15:32:58 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,7 @@ int	ft_isnumber(char *str)
 			return (0);
 		i++;
 	}
+	if (str[i] == '\0' && (str[i - 1] == '-' || str[i - 1] == '+'))
+		return (0);
 	return (1);
 }
