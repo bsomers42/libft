@@ -6,13 +6,13 @@
 /*   By: bsomers <bsomers@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/09 13:40:13 by bsomers       #+#    #+#                 */
-/*   Updated: 2022/03/09 13:41:38 by bsomers       ########   odam.nl         */
+/*   Updated: 2022/04/20 15:03:49 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isnumber(char *str)
+int	ft_isnumber(char *str)
 {
 	int		i;
 
@@ -21,9 +21,9 @@ int		ft_isnumber(char *str)
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 		i++;
-	while (str[i])
+	while (str[i] != '\0')
 	{
-		if (!ft_isdigit(str[i]))
+		if (ft_isdigit(str[i]) == 0)
 			return (0);
 		i++;
 	}
