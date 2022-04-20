@@ -6,7 +6,7 @@
 /*   By: bsomers <bsomers@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/02 14:25:01 by bsomers       #+#    #+#                 */
-/*   Updated: 2021/09/26 12:29:04 by bsomers       ########   odam.nl         */
+/*   Updated: 2022/04/20 12:43:01 by bsomers       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,7 @@ int	ft_atoi(const char *nptr)
 		num = num * 10 + (nptr[i] - '0');
 		i++;
 	}
+	if ((num > 2147483647 && min == 1) || (num > 2147483648 && min == -1))
+		return ((int) NULL);
 	return ((int)(num * min));
 }
