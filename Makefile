@@ -20,6 +20,7 @@ O_FILES = ft_isprint.o \
 		ft_isalnum.o \
 		ft_isascii.o \
 		ft_isnumber.o \
+		ft_isspace.o \
 		ft_memcpy.o \
 		ft_memmove.o \
 		ft_memset.o \
