@@ -6,7 +6,7 @@
 #    By: bsomers <bsomers@student.42.fr>              +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/13 16:21:29 by bsomers       #+#    #+#                  #
-#    Updated: 2022/03/04 11:36:13 by bsomers       ########   odam.nl          #
+#    Updated: 2022/06/10 13:16:12 by bsomers       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ O_FILES = ft_isprint.o \
 		ft_substr.o \
 		ft_substr_gnl.o \
 		ft_strjoin.o \
+		ft_strjoin_wfree.o \
 		ft_putchar_fd.o \
 		ft_putstr_fd.o \
 		ft_putendl_fd.o \
